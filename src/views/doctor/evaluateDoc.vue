@@ -105,7 +105,7 @@ export default {
     border-bottom: 10px solid #E8E8E8
 }
 .msgTop{
-    display: flex;
+  display: flex;
   text-align: left;
   border-bottom: 1px solid #E8E8E8;
   height: 95px;

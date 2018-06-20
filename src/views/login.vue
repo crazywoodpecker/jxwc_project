@@ -1,5 +1,11 @@
 <template>
   <div class="login">
+    <div v-transfer-dom>
+      <alert v-model="show" :title="'提示'">身份证或手机号错误</alert>
+    </div>
+    <div v-transfer-dom>
+      <alert v-model="show1" :title="'提示'">身份证或手机号不能为空</alert>
+    </div>
     <div class="from">
       <span>
         <img src="../assets/image/logo@2x.png" height="60pt" width="60pt" alt="郏县妇幼保健院">
@@ -8,18 +14,11 @@
         郏县母子健康手册
       </p>
     <group label-width="5.5em" label-margin-right="2em" label-align="justify">
-      <x-input v-model="passWord" placeholder="请输入身份证号">
+      <x-input v-model="sid" placeholder="请输入身份证号">
         <img slot="label" style="padding-right:10px;display:block;" src="../assets/image/身份证@2x.png" width="24" height="24">
       </x-input>
-      <x-input v-model="userName" placeholder="请输入姓名">
+      <x-input v-model="mobil" placeholder="请输入预留手机号">
         <img slot="label" style="padding-right:10px;display:block;" src="../assets/image/用户名@2x.png" width="24" height="24">
-      </x-input>
-      <x-input name="mobile" placeholder="请输入手机号码" keyboard="number" is-type="china-mobile">
-        <img slot="label" style="padding-right:10px;display:block;" src="../assets/image/手机@2x.png" width="24" height="24">
-      </x-input>
-      <x-input title="发送验证码" class="weui-vcode">
-        <x-button slot="right" mini>发送验证码</x-button>
-        <img slot="label" style="padding-right:10px;display:block;" src="../assets/image/验证码@2x.png" width="24" height="24">
       </x-input>
       <x-button type="primary" @click.native="checkLogin">登录</x-button>
     </group>
@@ -29,28 +28,57 @@
 
 <script>
 import axios from 'axios'
-import { Group, XInput, XButton } from 'vux'
+import { Group, XInput, XButton, Alert, TransferDomDirective as TransferDom } from 'vux'
 export default {
   name: 'login',
+  directives: {
+    TransferDom
+  },
   components: {
     Group,
     XInput,
-    XButton
+    XButton,
+    Alert
   },
   data () {
     return {
-      title: '母子健康手册',
-      userName: '',
-      passWord: ''
+      sid: '',
+      mobil: '',
+      dataList: '',
+      show: false,
+      show1: false
     }
   },
   methods: {
     checkLogin () {
-      axios.get('/users').then(function (response) {
-        console.log(response)
-      }).catch(function (error) {
-        console.log(error)
-      })
+      if (this.sid === '' && this.mobil === '') {
+        this.show1 = true
+      } else {
+        // axios.post('http://123.57.205.80:8188/api/UserLogin/CheckUserLogin', {
+        axios.get('/knowledge', {
+          sid: this.sid,
+          mobil: this.mobil
+        }).then(response => {
+          console.log(response)
+          this.dataList = JSON.parse(response.data)
+          if (this.dataList.status === '1') {
+            this.show = true
+          } else {
+            if (this.dataList.type === '1' && this.dataList.status === '0') {
+              this.$router.push('/PreparationOfPregnancy')
+            } else if (this.dataList.type === '0' && this.dataList.status === '0') {
+              this.$router.push('/pregnancy')
+            } else if (this.dataList.type === '3' && this.dataList.status === '0') {
+              this.$router.push('/childer')
+            } else if (this.dataList.type === '2' && this.dataList.status === '0') {
+              this.$router.push('/PreparationOfPregnancy')
+            }
+            console.log(this.dataList)
+          }
+        }).catch(function (error) {
+          console.log(error)
+        })
+      }
     }
   }
 }
@@ -89,7 +117,12 @@ export default {
   background-size: 100%;
 }
 .weui-cell{
-  padding: 10px 50px!important;
-  background-color: none!important;
+  padding: 10px 70px!important;
+}
+.weui-cells{
+  background: none!important;
+}
+.weui-cells:after{
+  border-bottom: none!important;
 }
 </style>

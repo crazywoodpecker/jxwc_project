@@ -1,6 +1,6 @@
 <template>
 	<div class="thridPage">
-		<popup-header :left-text="'返回'" :right-text= "'首页'" :title= demo1 @on-click-left="goback"></popup-header>
+		<popup-header :left-text="'返回'" :right-text= "'首页'" :title= titleText @on-click-left="goback"></popup-header>
 		<div class="title">{{title}}</div>
     <div class="context">{{text}}</div>
 	</div>

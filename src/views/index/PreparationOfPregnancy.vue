@@ -21,7 +21,7 @@
     </div>
     <div class="check">
       <div class="leftCheck">
-        <div>
+        <div style="text-align:center;">
             <img src="../../assets/image/检查@2x.png" >
             <span >检查报告</span>
         </div>
@@ -102,6 +102,9 @@ export default {
   methods: {
     sendParams () {
       this.$router.push({name: 'secondPage', params: {'title': '发现'}})
+    },
+    initData () {
+
     }
   }
 }
@@ -117,8 +120,9 @@ html, body {
   height: 100%;
   width: 100%;
 }
-.weui-grid__icon{
-  height: 70px!important;
+.tools .weui-grid__icon{
+  width: 50%!important;
+  height: 40px!important;
 }
 .weui-grid{
   padding: 15px 10px!important;
@@ -145,15 +149,15 @@ html, body {
 }
 .context {
   div{
-  line-height: 28px;
-  height: 28px;
-  border-bottom:1px solid @bordercolor;
-  padding: 5px 0 5px 25px;
-  text-align: left;
-  font-size: 14pt;
-  color: #111111;
-  letter-spacing: 2px;
-}
+    line-height: 28px;
+    height: 28px;
+    border-bottom:1px solid @bordercolor;
+    padding: 5px 0 5px 25px;
+    text-align: left;
+    font-size: 14pt;
+    color: #111111;
+    letter-spacing: 2px;
+  }
 }
 .rightTop{
   height: 50%;
@@ -169,7 +173,7 @@ html, body {
   width:49%;
   height: 100%;
   border-right: 1px solid @bordercolor;
-   span{
+  span{
     font-size: 14pt;
     position: absolute;
     top: 65%;
@@ -253,15 +257,18 @@ html, body {
   top:5px;
 }
 .serbtn{
-  padding: 8px 8px;
-  position: relative;
-  float: right;
-  border-radius: 25px;
-  right: 5px;
+  padding: 8px 8px!important;
+  position: relative!important;
+  float: right!important;
+  border-radius: 25px!important;
+  right: 5px!important;
 }
 .check{
   height: 100pt;
   width: 100%;
   border-bottom: 6px solid @bordercolor;
+}
+.weui-tabbar__label{
+  color:coral!important;
 }
 </style>

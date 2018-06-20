@@ -1,12 +1,25 @@
 var express = require('express');
+var mongoose = require('mongoose')
 var router = express.Router();
+var knowledge = require('../models/knowledge')
+/* GET knowledge listing. */
+mongoose.connect('mongodb://localhost/demo');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    console.log('is in')
-    res.json({
-        name: 'xiaoming',
-        conut: '2'
-    })
+mongoose.connection.on("connected", function () {
+  console.log("MongoDB connected success.")
+});
+
+mongoose.connection.on("error", function () {
+  console.log("MongoDB connected fail.")
+});
+
+mongoose.connection.on("disconnected", function () {
+  console.log("MongoDB connected disconnected.")
+});
+router.get('/knowledge', function(req, res, next) {
+  knowledge.find({},function(err,docs){
+    console.log(docs);
+    res.send(docs);
+  });
 });
 module.exports = router;

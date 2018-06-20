@@ -34,7 +34,7 @@ export default {
   },
   data () {
     return {
-      demo1: ''
+      titleText: ''
     }
   },
   mounted () {
