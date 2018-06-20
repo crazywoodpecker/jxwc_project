@@ -100,38 +100,38 @@ export default {
 <style lang="less">
 .evaluateDoc{
   text-align: left;
-}
-.msgContent{
-    border-bottom: 10px solid #E8E8E8
-}
-.msgTop{
-  display: flex;
-  text-align: left;
-  border-bottom: 1px solid #E8E8E8;
-  height: 95px;
-  .right{
-    width: 100%;
-    font-size: 13px;
-    padding: 5px;
+  .msgContent{
+      border-bottom: 10px solid #E8E8E8
   }
-}
-.msgButm{
-    position: relative;
-    li{
-        padding-left: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+  .msgTop{
+    display: flex;
+    text-align: left;
+    border-bottom: 1px solid #E8E8E8;
+    height: 95px;
+    .right{
+      width: 100%;
+      font-size: 13px;
+      padding: 5px;
     }
-    .checkDoc{
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        border-radius: 25px;
-        height: 30px;
-        width: 100px;
-        background-color: white;
-        border: 1px solid #FC4568;
-        color: #FC4568;
-    }
+  }
+  .msgButm{
+      position: relative;
+      li{
+          padding-left: 15px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+      }
+      .checkDoc{
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          border-radius: 25px;
+          height: 30px;
+          width: 100px;
+          background-color: white;
+          border: 1px solid #FC4568;
+          color: #FC4568;
+      }
+  }
 }
 </style>

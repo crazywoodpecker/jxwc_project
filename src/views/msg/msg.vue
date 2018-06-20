@@ -23,14 +23,16 @@ export default {
 }
 </script>
 <style lang="less">
-.title{
-  font-size: 15pt;
-  margin-top: 20px;
-  text-align: center;
-}
-.context{
-  text-indent: 2rem;
-  padding: 20px;
-  text-align: left;
+.msg{
+  .title{
+    font-size: 15pt;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .context{
+    text-indent: 2rem;
+    padding: 20px;
+    text-align: left;
+  }
 }
 </style>

@@ -50,51 +50,54 @@ export default {
 }
 </script>
 <style lang="less">
-.weui-btn_primary{
-    color: #FC4568!important;
-  background-color: white!important;
-  border: 1px solid #FC4568!important;
-  border-radius: 25px!important;
-  width: 60%!important;
-  margin-top: 20px;
-}
-.right{
-  margin-top: 10%;
-  p{
-    margin-top: 7%;
-    margin-left: 20%;
-    color: white;
-    font-size: 20pt;
+.mine{
+
+  .weui-btn_primary{
+      color: #FC4568!important;
+    background-color: white!important;
+    border: 1px solid #FC4568!important;
+    border-radius: 25px!important;
+    width: 60%!important;
+    margin-top: 20px;
   }
-  background-image: url("../../assets/image/孕期背景@2x.png");
-  background-repeat: no-repeat;
-  height: 87px;
-  width: 200px;
-}
-.topHeader{
-  display: flex;
-  height: 119pt;
-  width: 100%;
-  background-image: url("../../assets/image/minbackground.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  .left{
-    display: flex;
-    width: 52%;
-    .portrait{
-      margin-left: 18%;
-      margin-top: 17%;
-      margin-right: 7%;
-      height: 50pt;
-      width: 50pt;
+  .right{
+    margin-top: 10%;
+    p{
+      margin-top: 7%;
+      margin-left: 20%;
+      color: white;
+      font-size: 20pt;
     }
-    div{
-      height: 30px;
-      line-height: 30px;
-      margin-top: 17%;
-      img{
-        height: 20px;
-        width: 20px;
+    background-image: url("../../assets/image/孕期背景@2x.png");
+    background-repeat: no-repeat;
+    height: 87px;
+    width: 200px;
+  }
+  .topHeader{
+    display: flex;
+    height: 119pt;
+    width: 100%;
+    background-image: url("../../assets/image/minbackground.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .left{
+      display: flex;
+      width: 52%;
+      .portrait{
+        margin-left: 18%;
+        margin-top: 17%;
+        margin-right: 7%;
+        height: 50pt;
+        width: 50pt;
+      }
+      div{
+        height: 30px;
+        line-height: 30px;
+        margin-top: 17%;
+        img{
+          height: 20px;
+          width: 20px;
+        }
       }
     }
   }

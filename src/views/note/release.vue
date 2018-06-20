@@ -1,5 +1,5 @@
 <template>
-    <div class="evvluate">
+    <div class="release">
       <popup-header :right-text="'首页'" :title= "'写日记'">
           <img slot="left-text" style="padding-right:10px;display:block;height:15px;width:10px;margin-top:15px" src="../../assets/image/返回@2x.png" width="30" height="30">
       </popup-header>
@@ -40,14 +40,16 @@ export default {
 }
 </script>
 <style lang="less">
-.weui-btn_primary{
-  background-color: #FC4568!important;
-  border-radius: 25px!important;
-  width: 60%!important;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.vux-no-group-title{
-  margin-top: 0!important;
+.release{
+  .weui-btn_primary{
+    background-color: #FC4568!important;
+    border-radius: 25px!important;
+    width: 60%!important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .vux-no-group-title{
+    margin-top: 0!important;
+  }
 }
 </style>

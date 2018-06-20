@@ -59,20 +59,20 @@ export default {
 <style lang="less">
 .detailedMsg{
   text-align: left;
-}
-.msgContent{
-  display: flex;
-  text-align: left;
-  .right{
-    font-size: 13px;
-    padding: 5px;
-  }
-}
-.left{
-    img{
-        height: 50px;
-        width: 50px;
-        padding: 13px;
+  .msgContent{
+    display: flex;
+    text-align: left;
+    .right{
+      font-size: 13px;
+      padding: 5px;
     }
+  }
+  .left{
+      img{
+          height: 50px;
+          width: 50px;
+          padding: 13px;
+      }
+  }
 }
 </style>

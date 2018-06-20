@@ -54,26 +54,29 @@ export default {
 }
 </script>
 <style lang="less">
-    .msgContent{
-        border-bottom: 1px solid #E8E8E8;
-        .img{
-            img{
-                width: 80px;
-                height: 80px;
-            }
-            padding: 10px;
-        }
-        .time{
-            text-align: right;
-            padding-right: 10px;
-        }
-        .context{
-            padding: 15px;
-        }
-        .title{
-            font-size: 22px;
-            padding-left:15px;
-            padding-top: 5px ;
-        }
-    }
+.note{
+
+  .msgContent{
+      border-bottom: 1px solid #E8E8E8;
+      .img{
+          img{
+              width: 80px;
+              height: 80px;
+          }
+          padding: 10px;
+      }
+      .time{
+          text-align: right;
+          padding-right: 10px;
+      }
+      .context{
+          padding: 15px;
+      }
+      .title{
+          font-size: 22px;
+          padding-left:15px;
+          padding-top: 5px ;
+      }
+  }
+}
 </style>

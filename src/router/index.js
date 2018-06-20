@@ -16,7 +16,6 @@ import mine from '@/views/mine/mine'
 import msg from '@/views/msg/msg'
 import evaluate from '@/views/report/evaluate'
 import release from '@/views/note/release'
-import demo1 from '@/views/demo1'
 Vue.use(Router)
 
 export default new Router({
@@ -101,11 +100,6 @@ export default new Router({
       path: '/release',
       name: 'release',
       component: release
-    },
-    {
-      path: '/demo1',
-      name: 'demo1',
-      component: demo1
     }
   ]
 })

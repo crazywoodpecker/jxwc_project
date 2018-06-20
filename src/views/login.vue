@@ -54,12 +54,11 @@ export default {
       if (this.sid === '' && this.mobil === '') {
         this.show1 = true
       } else {
-        // axios.post('http://123.57.205.80:8188/api/UserLogin/CheckUserLogin', {
-        axios.get('/knowledge', {
+        axios.post('http://123.57.205.80:8188/api/UserLogin/CheckUserLogin', {
+        // axios.get('/knowledge', {
           sid: this.sid,
           mobil: this.mobil
         }).then(response => {
-          console.log(response)
           this.dataList = JSON.parse(response.data)
           if (this.dataList.status === '1') {
             this.show = true

@@ -1,5 +1,5 @@
 <template>
-    <div class="evvluate">
+    <div class="evaluate">
       <popup-header :left-text="'返回'" :right-text="'首页'" :title= "'评价'" @on-click-left="goback">
           <img slot="left-text" style="padding-right:10px;display:block;height:15px;width:10px;margin-top:15px" src="../../assets/image/返回@2x.png" width="30" height="30">
       </popup-header>
@@ -63,30 +63,31 @@ export default {
 }
 </script>
 <style lang="less">
-.weui-btn_primary{
-  background-color: #FC4568!important;
-  border-radius: 25px!important;
-  width: 60%!important;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.type{
-  border-bottom: 10px solid #E8E8E8;
-  font-size: 14pt;
-}
-.hospt{
-  border-bottom: 10px solid #E8E8E8;
-}
-.msgContent{
-    border-bottom: 1px solid #E8E8E8;
-    display: flex;
-    margin-top: 15px;
-
-}
-.weui-cell__ft{
-    padding-right: 90px;
-}
-.vux-label{
-    margin-left: 25px;
+.evaluate{
+  .weui-btn_primary{
+    background-color: #FC4568!important;
+    border-radius: 25px!important;
+    width: 60%!important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .type{
+    border-bottom: 10px solid #E8E8E8;
+    font-size: 14pt;
+  }
+  .hospt{
+    border-bottom: 10px solid #E8E8E8;
+  }
+  .msgContent{
+      border-bottom: 1px solid #E8E8E8;
+      display: flex;
+      margin-top: 15px;
+  }
+  .weui-cell__ft{
+      padding-right: 90px;
+  }
+  .vux-label{
+      margin-left: 25px;
+  }
 }
 </style>

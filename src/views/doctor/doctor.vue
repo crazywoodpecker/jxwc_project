@@ -82,13 +82,13 @@ export default {
 <style lang="less">
 .doctor{
   text-align: left;
-}
-.msgContent{
-  display: flex;
-  text-align: left;
-  .right{
-    font-size: 13px;
-    padding: 5px;
+  .msgContent{
+    display: flex;
+    text-align: left;
+    .right{
+      font-size: 13px;
+      padding: 5px;
+    }
   }
 }
 </style>

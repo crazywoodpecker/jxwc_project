@@ -66,11 +66,13 @@ export default {
 }
 </script>
 <style lang="less">
-.vux-no-group-title{
-    margin-top: 0!important;
-}
-.weui-cell_access .weui-cell__ft{
-    padding-right: 55%!important;
-    color: #111111!important;
+.secondPage{
+  .vux-no-group-title{
+      margin-top: 0!important;
+  }
+  .weui-cell_access .weui-cell__ft{
+      padding-right: 55%!important;
+      color: #111111!important;
+  }
 }
 </style>
